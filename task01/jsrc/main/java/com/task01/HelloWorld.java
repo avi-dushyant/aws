@@ -8,12 +8,11 @@ import com.syndicate.deployment.model.RetentionSetting;
 import java.util.HashMap;
 import java.util.Map;
 
-@LambdaHandler(
+@lambdaHandler(
     lambdaName = "hello_world",
 	roleName = "hello_world-role",
 	isPublishVersion = false,
-		aliases = {"learn"},
-	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED,
+	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 
 )
 public class HelloWorld implements RequestHandler<Object, Map<String, Object>> {
