@@ -11,9 +11,8 @@ import java.util.Map;
 @LambdaHandler(
     lambdaName = "hello_world",
 	roleName = "hello_world-role",
-	isPublishVersion = true,
-	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED,
-		aliases = {"learn"}
+	isPublishVersion = false,
+	logsExpiration = RetentionSetting.SYNDICATE_ALIASES_SPECIFIED
 
 )
 public class HelloWorld implements RequestHandler<Object, Map<String, Object>> {
